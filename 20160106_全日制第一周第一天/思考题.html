@@ -7,15 +7,15 @@
 <body>
 <script type="text/javascript">
     var ary = [1, 2, 3, 4];
-    function fn(ary) {
-        ary[0] = 0;
-        ary = [0];
-        ary[0] = 100;
-        return ary;
+    function fn(n) {
+        n[0] = 0;
+        n = [0];
+        n[0] = 100;
+        return n;
     }
     var res = fn(ary);
-    console.log(ary);//->[0,2,3,4]
-    console.log(res);//->[100]
+    console.log(ary);  //这一步的时候fn函数是否执行？
+    console.log(res);
 </script>
 </body>
 </html>

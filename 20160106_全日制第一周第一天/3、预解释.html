@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
     //    console.log(obj1.name);//->"李四"
 
     console.log(sum);//->输出的不是undefined,而是当前函数本身(因为在预解释的时候声明和定义都完成了)
-    sum(1, 2);//->3 发现及时看上去是在函数定义的代码之上执行的,但是也是可以执行的,因为在JS整体还没执行的时候我们的sum就已经定义完成了,所以不管在哪都可以执行
+    sum(1, 2);//->3 发现即使看上去是在函数定义的代码之上执行的,但是也是可以执行的,因为在JS整体还没执行的时候我们的sum就已经定义完成了,所以不管在哪都可以执行
     function sum(num1, num2) {
         var total = null;
         total = num1 + num2;
