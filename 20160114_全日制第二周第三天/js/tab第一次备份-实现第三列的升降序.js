@@ -4,12 +4,10 @@ var tHead = oTab.tHead;//->表格独有的属性,获取指定table下的thead
 var tBody = oTab.tBodies[0];//->获取指定table下的所有的tbody中的第一个
 var oThs = tHead.rows[0].cells;//->获取tHead下所有行中的第一行下的所有的列 rows获取所有行 cells获取所有的列
 var oTrs = tBody.rows;//->获取tBody下的所有的行
-
 //2、实现数据绑定
 function bindData() {
     var frg = document.createDocumentFragment();
     for (var i = 0; i < jsonAry.length; i++) {
-
         //事先进行数据的初始化处理
         var cur = jsonAry[i];
         cur.sex = cur.sex === 0 ? "男" : "女";
@@ -63,7 +61,6 @@ function sortList() {
     }
     tBody.appendChild(frg);
     frg = null;
-
     //4)排完序后的奇数偶数行和之前的不一样了,需要重新的计算隔行变色
     changeBg();
 }

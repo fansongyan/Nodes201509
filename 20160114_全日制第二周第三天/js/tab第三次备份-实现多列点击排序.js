@@ -75,11 +75,11 @@ function sortList(n) {
 
 //5、给所有表头中的列(具有class="cursor"这个样式的列)绑定点击事件
 for (var i = 0; i < oThs.length; i++) {
-    var curTh = oThs[i];
-    if (curTh.className === "cursor") {
-        curTh.flag = -1;
-        curTh.index = i;
-        curTh.onclick = function () {
+    var curCh = oThs[i];
+    if (curCh.className === "cursor") {
+        curCh.flag = -1;
+        curCh.index = i;
+        curCh.onclick = function () {
             sortList.call(this, this.index);
         };
     }

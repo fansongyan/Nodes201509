@@ -2,16 +2,16 @@
  * utils.js 存储的是我们项目中常用的公共的方法
  */
 var utils = {
-    //listToArray:把类数组转换为数组(兼容所有的浏览器)
-    listToArray: function (likeAry) {
+    listToAry: function (likeArray) {
         var ary = [];
         try {
-            ary = Array.prototype.slice.call(likeAry, 0);
+          ary=Array.prototype.slice.call(likeArray,0)
         } catch (e) {
-            for (var i = 0; i < likeAry.length; i++) {
-                ary[ary.length] = likeAry[i];
-            }
+           for(var i=0;i<likeArray.length;i++){
+                ary[ary.length]=likeArray[i];
+           }
         }
         return ary;
     }
-};
+}
+

@@ -74,6 +74,6 @@ function sortList() {
 oThs[2].flag = -1;
 oThs[2].onclick = function () {
     //点击行为对应的匿名函数中的 this->oThs[2]
-    //sortList();//sortList中的 this->window
+    //sortList();//sortList 中的this->window
     sortList.call(this);//->sortList.call(oThs[2]); //sortList中的 this->oThs[2]
 };
