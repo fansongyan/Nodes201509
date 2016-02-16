@@ -55,6 +55,7 @@
         }
     }
 
+
     //->实现点击焦点切换轮播图
     tipMove();
     function tipMove() {
@@ -89,7 +90,7 @@
         selectTip();
         autoTimer = window.setInterval(autoMove, 2000);
     };
-    
+
     //->实现自动轮播
     function autoMove() {
         step++;
