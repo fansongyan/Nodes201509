@@ -11,7 +11,6 @@
     //->数据绑定
     bindData();
     function bindData() {
-        //->图片
         var str = "";
         for (var i = 0; i < ary.length; i++) {
             str += "<div><img src='' trueImg='" + ary[i] + "'/></div>";
@@ -19,8 +18,6 @@
         str += "<div><img src='' trueImg='" + ary[0] + "'/></div>";
         inner.innerHTML = str;
         inner.style.width = (count + 1) * 1000 + "px";
-
-        //->焦点
         str = "";
         for (i = 0; i < ary.length; i++) {
             str += "<li></li>";
@@ -51,9 +48,12 @@
         var tempStep = step;
         tempStep >= tipList.length ? tempStep = 0 : null;
         for (var i = 0; i < tipList.length; i++) {
-            tipList[i].className = i === tempStep ? "bg" : null;
+            tipList[i].className = tempStep === i ? "bg" : null;
         }
     }
+
+
+
 
 
     //->实现点击焦点切换轮播图
@@ -95,12 +95,12 @@
     function autoMove() {
         step++;
         if (step > count) {
-            step = 1;
+            step = 0;
             inner.style.left = 0;
         }
         animate(inner, {left: -step * 1000}, 500);
         selectTip();
-    }
+    };
 
     autoTimer = window.setInterval(autoMove, 2000);
 })();
