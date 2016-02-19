@@ -79,6 +79,7 @@
         e = e || window.event;
         //->计算鼠标偏移的值求出盒子当前的位置值
         var spanX = e.clientX - this["mouseX"], spanY = e.clientY - this["mouseY"];
+        console.log(this);
         var curL = this["boxL"] + spanX, curT = this["boxT"] + spanY;
         //->获取四个边界的值
         var minT = 0, minL = 0, maxT = winH - boxH, maxL = winW - boxW;
