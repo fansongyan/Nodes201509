@@ -180,6 +180,9 @@
         changePage();
     });
 
+
+
+
     //->绑定列表的数据
     function bindList(data) {
         var str = "";
@@ -290,6 +293,7 @@
             getInfoModel();
         }
     };
+
 
     function getInfoModel() {
         $ajax("/getInfo?count=" + count + "&page=" + page, function (con) {
